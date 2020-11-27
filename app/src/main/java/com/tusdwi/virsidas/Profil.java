@@ -1,10 +1,13 @@
 package com.tusdwi.virsidas;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
+import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -13,9 +16,12 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -39,6 +45,7 @@ public class Profil extends AppCompatActivity {
     StorageReference storageReference;
     String userId;
     ImageView photoProfil;
+    private Activity activity;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,6 +97,7 @@ public class Profil extends AppCompatActivity {
                     NoIndukPegawai.setText(documentSnapshot.getString("NIP"));
                     email.setText(documentSnapshot.getString("Email"));
                     tanggalLahir.setText(documentSnapshot.getString("TanggalLahir"));
+                    alamat.setText(documentSnapshot.getString("Alamat"));
                     noHandphone.setText(documentSnapshot.getString("NoHandphone"));
                 } else {
                     Log.d("tag", "onEvent: Document do not exists");
@@ -122,7 +130,38 @@ public class Profil extends AppCompatActivity {
 
 
         } else if (item.getItemId() == R.id.gantipassword) {
-            //Ganti Password
+            //ganti password
+            final EditText gantiPassword = new EditText(Profil.this);
+            final AlertDialog.Builder builder = new AlertDialog.Builder(Profil.this);
+            builder.setTitle("Ubah Password?");
+            builder.setMessage("Masukkan password baru");
+            builder.setView(gantiPassword);
+
+            builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    String PassBaru = gantiPassword.getText().toString();
+                    user.updatePassword(PassBaru).addOnSuccessListener(new OnSuccessListener<Void>() {
+                        @Override
+                        public void onSuccess(Void aVoid) {
+                            Toast.makeText(Profil.this, "Ubah password berhasil", Toast.LENGTH_SHORT).show();
+                        }
+                    }).addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            Toast.makeText(Profil.this, "Gagal merubah password", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                }
+            });
+
+            builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    //close
+                }
+            });
+            builder.create().show();
         }
 
         return true;

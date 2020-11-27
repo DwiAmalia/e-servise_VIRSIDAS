@@ -95,7 +95,7 @@ public class Registrasi extends AppCompatActivity {
                             Map<String, Object> userInfo = new HashMap<>();
                             userInfo.put("NamaLengkap", fullName.getText().toString());
                             userInfo.put("Email", email.getText().toString());
-                            userInfo.put("Password", password.getText().toString());
+                            //userInfo.put("Password", password.getText().toString());
                             userInfo.put("NoHandphone", phone.getText().toString());
 
                             //user
