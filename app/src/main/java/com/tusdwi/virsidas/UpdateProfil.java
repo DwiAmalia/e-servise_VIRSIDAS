@@ -13,8 +13,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -31,10 +29,12 @@ import com.squareup.picasso.Picasso;
 import java.util.HashMap;
 import java.util.Map;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class UpdateProfil extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText NamaLengkap, NoIndukPegawai, emailUser, alamat, tanggalLahir, noHandphone;
-    ImageView profileImageView;
+    CircleImageView profileImageView;
     Button saveBtn;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
