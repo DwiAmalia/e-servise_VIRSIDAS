@@ -24,9 +24,9 @@
             android:title="Absen" />
 
         <item
-            android:id="@+id/raport"
+            android:id="@+id/rapor"
             android:icon="@drawable/ic_baseline_storage_24"
-            android:title="Raport Siswa" />
+            android:title="Rapor Siswa" />
 
             </group>
 
