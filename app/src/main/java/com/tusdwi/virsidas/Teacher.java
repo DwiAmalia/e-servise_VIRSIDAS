@@ -77,7 +77,7 @@ public class Teacher extends AppCompatActivity implements NavigationView.OnNavig
             case R.id.absen:
                 break;
 
-            case R.id.raport:
+            case R.id.rapor:
                 break;
 
             case R.id.nav_logout:
