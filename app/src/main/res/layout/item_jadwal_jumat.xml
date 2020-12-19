@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/JamPelajaran"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/ungu"
+                android:fontFamily="monospace"
+                android:padding="10dp"
+                android:text="07:00-07:30"
+                android:textAlignment="center"
+                android:textColor="@color/putih"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.054"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/Pelajaran"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="monospace"
+                android:text="Jam Kosong"
+                android:textColor="@color/hitam"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/JamPelajaran"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.032"
+                app:layout_constraintStart_toEndOf="@+id/JamPelajaran"
+                app:layout_constraintTop_toTopOf="@+id/JamPelajaran"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/Pelajaran"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/Pelajaran"
+                app:layout_constraintTop_toBottomOf="@+id/Pelajaran"
+                app:srcCompat="@drawable/ic_baseline_school_24" />
+
+            <TextView
+                android:id="@+id/Pengajar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="monospace"
+                android:text="Kelas IA"
+                android:textColor="@color/hitam"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="@+id/Pelajaran"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <ImageButton
+                android:id="@+id/Gmeet"
+                android:layout_width="37dp"
+                android:layout_height="33dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/Pengajar"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/JamPelajaran"
+                app:layout_constraintTop_toBottomOf="@+id/JamPelajaran"
+                app:srcCompat="@drawable/ic_baseline_video_call_24" />
+
+            <TextView
+                android:id="@+id/link"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="TextView"
+                android:textColor="@color/ungu"
+                app:layout_constraintBottom_toBottomOf="@+id/Gmeet"
+                app:layout_constraintEnd_toEndOf="@+id/Pengajar"
+                app:layout_constraintHorizontal_bias="0.023"
+                app:layout_constraintStart_toEndOf="@+id/Gmeet"
+                app:layout_constraintTop_toTopOf="@+id/Gmeet"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>

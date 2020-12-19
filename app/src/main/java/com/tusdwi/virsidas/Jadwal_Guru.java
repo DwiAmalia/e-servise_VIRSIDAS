@@ -1,5 +1,8 @@
 package com.tusdwi.virsidas;
 
+import android.os.Bundle;
+import android.view.View;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -7,10 +10,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
-import android.os.Bundle;
-import android.view.View;
-
 import com.google.android.material.tabs.TabLayout;
+import com.tusdwi.virsidas.Jadwal.Jumat;
+import com.tusdwi.virsidas.Jadwal.Kamis;
+import com.tusdwi.virsidas.Jadwal.Rabu;
+import com.tusdwi.virsidas.Jadwal.Selasa;
+import com.tusdwi.virsidas.Jadwal.Senin;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -50,10 +55,11 @@ public class Jadwal_Guru extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager){
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new Senin(), "SENIN");
-        adapter.addFragment(new Fragment(), "SELASA");
-        adapter.addFragment(new  Fragment(), "RABU");
-        adapter.addFragment(new Fragment(), "KAMIS");
-        adapter.addFragment(new Fragment(),"JUMAT");
+        adapter.addFragment(new Selasa(), "SELASA");
+        adapter.addFragment(new Rabu(), "RABU");
+        adapter.addFragment(new Kamis(), "KAMIS");
+        adapter.addFragment(new Jumat(),"JUMAT");
+        adapter.addFragment(new Fragment(),"SABTU");
         viewPager.setAdapter(adapter);
     }
 

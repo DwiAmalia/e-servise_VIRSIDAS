@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/wrapper"
     tools:context=".Jadwal_Guru">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/toolbar"
-        android:background="@color/abuabu"
+        android:background="@color/teacher"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:title="Jadwal Pelajaran"
         app:titleMarginStart="20dp">
@@ -26,7 +27,7 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab"
             app:tabMode="scrollable"
-            android:background="@color/abuabu"
+            android:background="@color/teacher"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
         </com.google.android.material.tabs.TabLayout>
