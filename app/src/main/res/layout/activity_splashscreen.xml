@@ -5,21 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#0F5959"
+    android:gravity="center"
     tools:context=".Splashscreen">
 
     <ImageView
         android:id="@+id/icon"
-        android:layout_width="120dp"
+        android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="3dp"
-        android:layout_marginTop="283dp"
-        android:layout_marginEnd="-3dp"
-        android:src="@drawable/logo2"
+        android:src="@drawable/logo"
         tools:ignore="MissingConstraints" />
 
 
