@@ -27,8 +27,11 @@
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab"
             app:tabMode="scrollable"
+            app:tabGravity="fill"
             android:background="@color/teacher"
             android:layout_width="match_parent"
+            app:tabSelectedTextColor="@android:color/white"
+            app:tabTextColor="@color/hitam"
             android:layout_height="wrap_content">
         </com.google.android.material.tabs.TabLayout>
 

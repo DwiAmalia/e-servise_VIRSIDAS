@@ -16,6 +16,7 @@ import com.tusdwi.virsidas.Jadwal.Kamis;
 import com.tusdwi.virsidas.Jadwal.Rabu;
 import com.tusdwi.virsidas.Jadwal.Selasa;
 import com.tusdwi.virsidas.Jadwal.Senin;
+import com.tusdwi.virsidas.Jadwal.Sabtu;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +60,7 @@ public class Jadwal_Guru extends AppCompatActivity {
         adapter.addFragment(new Rabu(), "RABU");
         adapter.addFragment(new Kamis(), "KAMIS");
         adapter.addFragment(new Jumat(),"JUMAT");
-        adapter.addFragment(new Fragment(),"SABTU");
+        adapter.addFragment(new Sabtu(),"SABTU");
         viewPager.setAdapter(adapter);
     }
 

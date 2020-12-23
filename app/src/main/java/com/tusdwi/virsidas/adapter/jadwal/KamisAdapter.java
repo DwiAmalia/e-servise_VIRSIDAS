@@ -42,9 +42,9 @@ public class KamisAdapter extends FirebaseRecyclerAdapter<model_jadwal, KamisAda
         public myviewholder(@NonNull View itemView) {
             super(itemView);
 
-            pelajaran=itemView.findViewById(R.id.Pelajaran);
+            pelajaran=itemView.findViewById(R.id.NamaPelajaran);
             pengajar=itemView.findViewById(R.id.Pengajar);
-            jam=itemView.findViewById(R.id.JamPelajaran);
+            jam=itemView.findViewById(R.id.hari);
             link=itemView.findViewById(R.id.link);
         }
     }

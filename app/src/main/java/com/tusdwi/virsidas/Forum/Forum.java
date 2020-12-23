@@ -1,10 +1,12 @@
-package com.tusdwi.virsidas;
+package com.tusdwi.virsidas.Forum;
 
 import android.os.Bundle;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+
+import com.tusdwi.virsidas.R;
 
 public class Forum extends AppCompatActivity {
 

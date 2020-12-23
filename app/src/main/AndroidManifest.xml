@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Jadwal_Guru" />
         <activity
-            android:name=".Forum"
+            android:name=".Forum.Forum"
             android:parentActivityName=".Teacher" />
         <activity
             android:name=".UpdateProfil"
