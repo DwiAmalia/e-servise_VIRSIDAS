@@ -36,6 +36,8 @@ import com.squareup.picasso.Picasso;
 
 import javax.annotation.Nullable;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class Profil extends AppCompatActivity {
     TextView NamaLengkap, NoIndukPegawai, email, alamat, tanggalLahir, noHandphone;
@@ -44,7 +46,7 @@ public class Profil extends AppCompatActivity {
     FirebaseUser user;
     StorageReference storageReference;
     String userId;
-    ImageView photoProfil;
+    CircleImageView photoProfil;
     private Activity activity;
 
     @Override

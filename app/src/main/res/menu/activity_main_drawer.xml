@@ -19,6 +19,11 @@
             android:title="Forum" />
 
         <item
+            android:id="@+id/jadwal"
+            android:icon="@drawable/ic_baseline_today_24"
+            android:title="Jadwal" />
+
+        <item
             android:id="@+id/absen"
             android:icon="@drawable/ic_baseline_assignment_24"
             android:title="Absen" />
